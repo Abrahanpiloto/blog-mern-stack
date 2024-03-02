@@ -38,7 +38,7 @@
 
 body {
 	font-family: "Ubuntu", sans-serif;
-	background-color: var(--color-black-pure);
+	background-color: var(--color-bg);
 	color: var(--color-gray-700);
 	/* font-size: 0.9rem; */
 	line-height: 1.6;
@@ -63,7 +63,7 @@ a {
 }
 
 a:hover {
-	color: var(--color-yellow);
+	color: var(--color-primary);
 }
 ul {
 	list-style: none;
@@ -178,7 +178,7 @@ nav {
 	display: grid;
 	place-items: center;
 	/* background: var(255, 255, 255, 0.5); */
-	background: var(--color-gray-500);
+	background: rgba(0, 0, 0, 0.8);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -190,9 +190,10 @@ nav {
 /* ================== FOOTER =================== */
 
 footer {
-	background: var(--color-gray-900);
+	background: rgba(0, 0, 0, 0.9);
 	margin-top: 6rem;
 	padding-top: 6rem;
+	/* height: 8rem; */
 }
 
 .footer__categories {
@@ -204,7 +205,7 @@ footer {
 }
 
 .footer__categories li {
-	background: var(--color-gray-700);
+	background: var(--color-primary);
 	color: var(--color-white);
 	padding: 0.6rem 1.4rem;
 	border-radius: var(--radius-2);
@@ -221,8 +222,8 @@ footer {
 .footer__copyright {
 	text-align: center;
 	color: var(--color-white);
-	border-top: 2px solid var(--color-gray-700);
-	font-weight: 300;
+	border-top: 2px solid white;
+	font-weight: 400;
 }
 
 /* ============== ERROR PAGE ================ */
@@ -236,19 +237,17 @@ footer {
 }
 
 .center h1 {
-	color: var(--color-yellow);
+	color: var(--color-black-pure);
 	padding: 3rem;
 }
 
 span {
-	color: var(--color-yellow);
+	color: var(--color-primary);
 	font-style: italic;
 }
 
 /* ================== POSTS ================= */
-.posts__container,
-.author-posts__container,
-.category-posts__container {
+.posts__container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 4rem;
@@ -349,4 +348,45 @@ span {
 		0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
 		0 100px 80px rgba(0, 0, 0, 0.12);
 	border-radius: var(--radius-2);
+}
+
+/* ============== REGISTER & FORM STYLES ============== */
+
+.form {
+	margin-top: 13rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.form h2 {
+	color: var(--color-primary);
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 0.6rem 1rem;
+	border-radius: var(--radius-1);
+	resize: none;
+}
+
+.form__error-message {
+	background: var(--color-red);
+	color: var(--color-white);
+	font-size: 0.8rem;
+	padding: 0.6rem 1rem;
+	border-radius: var(--radius-1);
+	display: block;
+}
+
+.register,
+.login,
+.cretae-post {
+	width: var(--form-width);
+}
+
+.small {
+	color: var(--color-black-mediun);
 }
